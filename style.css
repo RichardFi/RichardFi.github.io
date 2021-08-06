@@ -1,0 +1,425 @@
+* {
+  font-family: 'Manrope', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.main {
+  color: #ffffff;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+}
+
+.main svg {
+  fill: #ffffff;
+}
+
+.main .container {
+  padding: 80px 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.main--HOME {
+  background-image: url(assets/background.jpg);
+  -webkit-animation: pageAnimation 1s linear forwards;
+          animation: pageAnimation 1s linear forwards;
+}
+
+.main--HOME .container {
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.main--PLANTS {
+  color: #000000;
+  background-image: none;
+  -webkit-animation: pageAnimation 1s linear forwards;
+          animation: pageAnimation 1s linear forwards;
+}
+
+.main--PLANTS .container {
+  background-color: #ffffff;
+}
+
+.main--PLANTS a {
+  color: #000000;
+}
+
+.main--PLANTS svg {
+  fill: #000000;
+}
+
+.main--SERVICE {
+  background-image: url(assets/backgroundService.jpg);
+  -webkit-animation: pageAnimation 1s linear forwards;
+          animation: pageAnimation 1s linear forwards;
+}
+
+.main--ABOUT {
+  background-image: url(assets/backgroundAbout.jpg);
+  -webkit-animation: pageAnimation 1s linear forwards;
+          animation: pageAnimation 1s linear forwards;
+}
+
+.main--CONTACT {
+  background-image: url(assets/backgroundContact.jpg);
+  -webkit-animation: pageAnimation 1s linear forwards;
+          animation: pageAnimation 1s linear forwards;
+}
+
+.main--CONTACT .container {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 20px 0;
+}
+
+.nav .logo {
+  width: 100px;
+}
+
+.nav .nav__left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+}
+
+.nav .nav__left .navbar__item {
+  margin: 0 5px;
+  -ms-flex-preferred-size: calc(10% - 50px);
+      flex-basis: calc(10% - 50px);
+  font-weight: 600;
+  text-align: center;
+  opacity: 0.6;
+}
+
+.nav .nav__left .navbar__item::after {
+  content: '';
+  width: 0;
+  border-bottom: 3px solid #7cb305;
+  margin: auto;
+  margin-top: 4px;
+  display: block;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav .nav__left .navbar__item--active,
+.nav .nav__left .navbar__item:hover {
+  opacity: 1;
+}
+
+.nav .nav__left .navbar__item--active::after,
+.nav .nav__left .navbar__item:hover::after {
+  width: 24px;
+}
+
+.nav .nav__left .navbar__item:last-of-type {
+  padding-right: 0;
+}
+
+.nav .nav__right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.nav .nav__right .social {
+  margin: 0 10px;
+}
+
+.page {
+  display: none;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.pages {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-preferred-size: 80vh;
+      flex-basis: 80vh;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pages .homepage {
+  max-width: 1280px;
+}
+
+.pages .homepage .title {
+  margin: 0;
+  font-size: 6rem;
+  font-weight: 300;
+}
+
+.pages .homepage .text {
+  margin: 30px 0;
+}
+
+.pages .plantspage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pages .plantspage .filters {
+  height: 500px;
+  -ms-flex-preferred-size: 20vw;
+      flex-basis: 20vw;
+}
+
+.pages .plantspage .filters .title {
+  margin: 30px 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.pages .plantspage .filters .filter {
+  margin: 20px 5px;
+  opacity: 0.6;
+}
+
+.pages .plantspage .filters .filter--active {
+  opacity: 1;
+}
+
+.pages .plantspage .products {
+  -ms-flex-preferred-size: 80vw;
+      flex-basis: 80vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
+  overflow: auto;
+}
+
+.pages .plantspage .products .product {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  width: 480px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  display: none;
+  position: absolute;
+  visibility: hidden;
+  opacity: 0;
+}
+
+.pages .plantspage .products .product .image {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+}
+
+.pages .plantspage .products .product .description {
+  margin: auto;
+}
+
+.pages .plantspage .products .product .description .name {
+  font-weight: 600;
+}
+
+.pages .plantspage .products .product .description .price {
+  color: #666666;
+}
+
+.pages .plantspage .products .product--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  -webkit-animation: pageAnimation 1s linear forwards;
+          animation: pageAnimation 1s linear forwards;
+}
+
+.pages .plantspage .products #p1 .image {
+  background: url(assets/orchid1.png) center center no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pages .plantspage .products #p2 .image {
+  background: url(assets/tropical1.png) center center no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pages .plantspage .products #p3 .image {
+  background: url(assets/tropical2.png) center center no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pages .plantspage .products #p4 .image {
+  background: url(assets/tropical3.png) center center no-repeat;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.pages .servicepage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.pages .servicepage .service {
+  -ms-flex-preferred-size: 33%;
+      flex-basis: 33%;
+}
+
+.pages .servicepage .service .value {
+  line-height: 5.2rem;
+  font-size: 6rem;
+  color: #fcffe6;
+  font-weight: 600;
+}
+
+.pages .servicepage .service .title {
+  font-size: 1.6rem;
+  margin-top: 100px;
+}
+
+.pages .servicepage .service .description {
+  margin-right: 100px;
+  margin-top: 30px;
+  color: #dddddd;
+  font-size: 1.1rem;
+  line-height: 2rem;
+}
+
+.pages .contactpage {
+  margin-left: 100px;
+}
+
+.pages .contactpage .title {
+  margin: 0;
+  font-size: 8rem;
+  font-weight: 500;
+}
+
+.pages .contactpage .text {
+  margin: 30px 0;
+}
+
+.pages .aboutpage {
+  margin-left: 100px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.pages .aboutpage .title {
+  -ms-flex-preferred-size: 50%;
+      flex-basis: 50%;
+  margin: 0;
+  padding: 0;
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.pages .aboutpage .text {
+  -ms-flex-preferred-size: 60%;
+      flex-basis: 60%;
+  color: #dddddd;
+}
+
+.page--active {
+  display: block;
+  position: relative;
+  visibility: visible;
+  opacity: 1;
+  -webkit-animation: pageAnimation 1s linear forwards;
+          animation: pageAnimation 1s linear forwards;
+}
+
+@-webkit-keyframes pageAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes pageAnimation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.footer {
+  text-align: center;
+  opacity: 0.3;
+}
+/*# sourceMappingURL=style.css.map */
