@@ -1,7 +1,6 @@
 function createNav () {
   let previous = ''
-  let current = 'SERVICE'
-
+  let current = window.location.hash.substr(1) || 'PLANT'
   changePage()
   changeNavItem()
 
@@ -11,6 +10,17 @@ function createNav () {
 
       let to = event.target.getAttribute('href')
       push(to)
+      window.history.pushState(null, null, `#${current}`)
+    }
+  })
+
+  document.querySelectorAll('.product').forEach(element => {
+    element.onclick = event => {
+      event.preventDefault()
+
+      let to = `PLANT${element.id}`
+      push(to)
+      window.history.pushState(null, null, `#${current}`)
     }
   })
 
@@ -79,7 +89,7 @@ function productFilter () {
         element.classList.remove(className)
       })
     }
-    console.log(current)
+
     document.querySelectorAll('.' + current).forEach(element => {
       element.classList.add(className)
     })
@@ -106,10 +116,13 @@ function countProduct () {
   })
 }
 
+function showPlantInformation () {}
+
 function main () {
   createNav()
   productFilter()
   countProduct()
+  showPlantInformation()
 }
 
 main()

@@ -11,14 +11,13 @@ a {
   color: #ffffff;
 }
 
-
 .main {
   color: #ffffff;
   background-size: cover;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  svg{
+  svg {
     fill: #ffffff;
   }
   .container {
@@ -38,15 +37,27 @@ a {
 
 .main--PLANTS {
   color: #000000;
-  background-image: none;
+  background-image: url(assets/backgroundPlants.jpg);
   animation: pageAnimation 1s linear forwards;
-  .container {
-    background-color: #ffffff;
-  }
   a {
     color: #000000;
   }
-  svg{
+  svg {
+    fill: #000000;
+  }
+}
+
+.main--PLANTp1,
+.main--PLANTp2,
+.main--PLANTp3,
+.main--PLANTp4 {
+  color: #000000;
+  background-image: url(assets/backgroundPlants.jpg);
+  animation: pageAnimation 1s linear forwards;
+  a {
+    color: #000000;
+  }
+  svg {
     fill: #000000;
   }
 }
@@ -81,7 +92,6 @@ a {
     display: flex;
     flex-direction: row;
     flex-basis: 100%;
-    
 
     .navbar__item {
       margin: 0 5px;
@@ -119,7 +129,7 @@ a {
   .nav__right {
     display: flex;
     flex-direction: row;
-    .social{
+    .social {
       margin: 0 10px;
     }
   }
@@ -234,6 +244,63 @@ a {
       }
     }
   }
+
+  .plantpage {
+    display: flex;
+    flex-direction: row;
+    .description {
+      flex-basis: 20%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      h3{
+        color:#666666;
+        padding-bottom:14px;
+        margin:0;
+      }
+      h4{
+        font-size:2.5rem;
+        margin:0;
+        padding-bottom:25px;
+      }
+      .price{
+        color:#666666;
+      }
+    }
+    .image {
+      flex-basis: 60%;
+      height: 60vh;
+    }
+  }
+
+  #PLANTp1 {
+    .image {
+      background: url(assets/orchid1.png) center center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  #PLANTp2 {
+    .image {
+      background: url(assets/tropical1.png) center center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  #PLANTp3 {
+    .image {
+      background: url(assets/tropical2.png) center center no-repeat;
+      background-size: contain;
+    }
+  }
+
+  #PLANTp4 {
+    .image {
+      background: url(assets/tropical3.png) center center no-repeat;
+      background-size: contain;
+    }
+  }
+
   .servicepage {
     display: flex;
     flex-direction: row;
@@ -250,12 +317,11 @@ a {
         margin-top: 100px;
       }
       .description {
-        margin-right:100px;
+        margin-right: 100px;
         margin-top: 30px;
         color: #dddddd;
         font-size: 1.1rem;
         line-height: 2rem;
-
       }
     }
   }
@@ -270,20 +336,20 @@ a {
       margin: 30px 0;
     }
   }
-  .aboutpage{
+  .aboutpage {
     margin-left: 100px;
     display: flex;
     flex-direction: row;
     .title {
-      flex-basis:50%;
+      flex-basis: 50%;
       margin: 0;
       padding: 0;
       font-size: 6rem;
       font-weight: 500;
     }
-    .text{
-      flex-basis:60%;
-      color:#dddddd
+    .text {
+      flex-basis: 60%;
+      color: #dddddd;
     }
   }
 }
