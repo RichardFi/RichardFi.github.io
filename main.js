@@ -1,6 +1,6 @@
 function createNav () {
   let previous = ''
-  let current = window.location.hash.substr(1) || 'PLANT'
+  let current = window.location.hash.substr(1) || 'HOME'
   changePage()
   changeNavItem()
 
